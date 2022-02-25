@@ -1,10 +1,10 @@
 {
-  "name": "Zigbee2mqtt",
+  "name": "Zigbee2mqtt4test",
   "version": "1.23.0-1",
-  "slug": "zigbee2mqtt",
+  "slug": "zigbee2mqtt4test",
   "description": "Use your ZigBee devices without the vendor's bridge or gateway",
   "uart": true,
-  "url": "https://github.com/zigbee2mqtt/hassio-zigbee2mqtt/tree/master/zigbee2mqtt",
+  "url": "https://github.com/fschaeck/hassio-zigbee2mqtt/tree/inject/zigbee2mqtt",
   "startup": "application",
   "services": [
     "mqtt:need"
@@ -68,6 +68,7 @@
     }
   },
   "schema": {
+    "zigbee_inject_for_test: "bool?"
     "zigbee_shepherd_devices": "bool?",
     "zigbee_herdsman_debug": "bool?",
     "external_converters": [
@@ -171,5 +172,5 @@
       "log": "bool?"
     }
   },
-  "image": "zigbee2mqtt/zigbee2mqtt-{arch}"
+  "image": "fschaeck/zigbee2mqtt4test-{arch}"
 }

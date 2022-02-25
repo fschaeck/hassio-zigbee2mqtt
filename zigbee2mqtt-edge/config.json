@@ -1,10 +1,10 @@
 {
-  "name": "Zigbee2mqtt Edge",
+  "name": "Zigbee2mqtt4test Edge",
   "version": "edge",
-  "slug": "zigbee2mqtt_edge",
+  "slug": "zigbee2mqtt4test_edge",
   "description": "Development build of the Zigbee2mqtt add-on",
   "uart": true,
-  "url": "https://github.com/zigbee2mqtt/hassio-zigbee2mqtt/tree/master/zigbee2mqtt-edge",
+  "url": "https://github.com/fschaeck/hassio-zigbee2mqtt/tree/inject/zigbee2mqtt-edge",
   "startup": "application",
   "services": [
     "mqtt:need"
@@ -42,6 +42,7 @@
     "serial": {}
   },
   "schema": {
+    "zigbee_inject_for_test: "bool?",
     "zigbee_shepherd_devices": "bool?",
     "zigbee_herdsman_debug": "bool?",
     "data_path": "str",
@@ -67,5 +68,5 @@
       "rtscts": "bool?"
     }
   },
-  "image": "zigbee2mqtt/zigbee2mqtt-edge-{arch}"
+  "image": "fschaeck/zigbee2mqtt4test-edge-{arch}"
 }
