@@ -4,7 +4,7 @@
   "slug": "zigbee2mqtt4test",
   "description": "Use your ZigBee devices without the vendor's bridge or gateway",
   "uart": true,
-  "url": "https://github.com/fschaeck/hassio-zigbee2mqtt/tree/inject/zigbee2mqtt",
+  "url": "https://github.com/fschaeck/hassio-zigbee2mqtt/tree/master/zigbee2mqtt",
   "startup": "application",
   "services": [
     "mqtt:need"
@@ -172,5 +172,5 @@
       "log": "bool?"
     }
   },
-  "image": "fschaeck/zigbee2mqtt4test-{arch}"
+  "image": "fschaeckermann/zigbee2mqtt4test-{arch}"
 }
