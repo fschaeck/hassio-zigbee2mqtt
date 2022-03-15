@@ -68,7 +68,7 @@
     }
   },
   "schema": {
-    "zigbee_inject_for_test: "bool?"
+    "zigbee_inject_for_test": "bool?",
     "zigbee_shepherd_devices": "bool?",
     "zigbee_herdsman_debug": "bool?",
     "external_converters": [

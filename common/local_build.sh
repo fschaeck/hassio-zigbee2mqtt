@@ -1,8 +1,21 @@
+USER=${1}
+PASSWORD=${2}
+ARCH=${3:-amd64}
+
 cd ..
-cp common/Dockerfile zigbee2mqtt-edge/
-cp -R common/rootfs zigbee2mqtt-edge/
+cp common/Dockerfile zigbee2mqtt/
+cp -R common/rootfs zigbee2mqtt/
+
 docker run --rm --privileged \
--v $(pwd)/zigbee2mqtt-edge:/data homeassistant/amd64-builder --amd64 -t /data \
+-v $(pwd)/zigbee2mqtt:/data \
+-v ~/.docker:/root/.docker \
+homeassistant/amd64-builder \
+--$ARCH -t /data \
+--docker-user "$1" \
+--docker-password "$2" \
 --no-cache
-rm -rf zigbee2mqtt-edge/rootfs
-rm zigbee2mqtt-edge/Dockerfile
+# -v /var/run/docker.sock:/var/run/docker.sock:ro \
+# --test \
+
+rm -rf zigbee2mqtt/rootfs
+rm zigbee2mqtt/Dockerfile
